@@ -51,12 +51,9 @@ class MainController extends Controller
         for ($i=0;$i<$len;$i+=1)
 		{
 			$ascii=ord($cip[$i]); //to get the ascii values
-           // echo($cip[$i]."=".$ascii."=>");
 			if(($ascii>=(65) && $ascii<=(90)))
 			{
 				$msg.=chr((26+$ascii-65-$key)%26+65); //ASCII(65)=>A
-               // $a=chr((26+$ascii-65-$key)%26+65);
-               //echo($cip[$i]."=".$a."</br>");
 			}
             else if($ascii>=(97) && $ascii<=(122))
 			{
