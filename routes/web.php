@@ -1,0 +1,25 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/',[MainController::class,'create']);
+
+Route::post('/caser_encrypt',[MainController::class,'caser_enc']);
+
+Route::post('/caser_decrypt',[MainController::class,'caser_dec']);
+
+Route::post('/pf_encrypt',[MainController::class,'pf_enc']);
+
+Route::post('/pf_decrypt',[MainController::class,'pf_dec']);
